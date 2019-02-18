@@ -9,10 +9,11 @@
   </head>
   <body>
     <!-- put the image up of the page -->
-    <img src="petra.jpg" width="300" height="200" >
-    <img src="wadi-rum-night-camp.jpg" width="300" height="200" >
-    <img src="village.jpg" width="300" height="200" >
-
+    <div  class ="center" id="div1">
+      <img src="petra.jpg" width="330" height="200" >
+      <img src="wadi-rum-night-camp.jpg" width="330" height="200" >
+      <img src="village.jpg" width="330" height="200" >
+    </div>
 
    <!-- make the form inside the form -->
     <div class="container" color="blue">
@@ -21,11 +22,11 @@
         <div class="form-group">
           <h2>Enter your information:</h2>
           <label for="fname">Full Name:</label>
-          <input id="fname"  class="form-control">
+          <input id="fname"  class="form-control" style="width:400px">
         </div>
         <div class="form-group">
           <label for="email">Email:</label>
-          <input id="email" class="form-control">
+          <input id="email" class="form-control" style="width:400px">
         </div>
         <hr>
         <!-- the survey questions -->
@@ -33,8 +34,8 @@
 
         <div class="form-group">
           <label for="q1">Q1:which kind of land you like more:</label>
-          <select id="q1"  class="form-control">
-            <option>"Desert"</option>
+          <select id="q1"  class="form-control" style="width:400px">
+            <option >"Desert"</option>
             <option>"Beach"</option>
             <option>"desert"</option>
           </select>
@@ -44,7 +45,7 @@
         <div class="form-group">
           <label for="q2">which color do you like more than others:
           <div class="radio">
-            <input type="radio" name="color" value="green" checked>
+            <input type="radio" name="color" value="green" checked >
               green
           </div>
           <div class="radio">
