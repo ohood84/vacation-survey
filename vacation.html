@@ -8,37 +8,46 @@
     <script src="js/scripts.js"></script>
   </head>
   <body>
+
+    <div id="vacation-survey">
+
     <!-- put the image up of the page -->
-    <div  class ="center" id="div1">
-      <img src="petra.jpg" width="330" height="200" >
-      <img src="wadi-rum-night-camp.jpg" width="330" height="200" >
-      <img src="village.jpg" width="330" height="200" >
-    </div>
+      <div  class ="center" id="div1">
+        <img src="petra.jpg" width="330" height="200" >
+        <img src="wadi-rum-night-camp.jpg" width="330" height="200" >
+        <img src="village.jpg" width="330" height="200" >
+      </div>
 
    <!-- make the form inside the form -->
-    <div class="container" color="blue">
-      <form id="vac" action="https://github.com/ohood84/project2"  method="get">
+      <div class="container" color="blue">
+
+        <form id="vac">
+
         <!-- enter persinal https://github.com/ohood84/project2
 informatiion -->
-        <div class="form-group">
-          <h2>Enter your information:</h2>
-          <label for="fname">Full Name:</label>
-          <input id="fname"  class="form-control" style="width:400px">
-        </div>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input id="email" class="form-control" style="width:400px">
-        </div>
-        <hr>
+          <div class="form-group">
+            <h2>Enter your information:</h2>
+            <label for="fname">Full Name:</label>
+            <input id="fname"  class="form-control" style="width:400px">
+          </div>
+
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input id="email" class="form-control" style="width:400px">
+          </div>
+          <hr>
+
+
         <!-- the survey questions -->
         <h2>Please answer the questions below:</h2>
 
         <div class="form-group">
-          <label for="q1">Q1:which kind of land you like more:</label>
-          <select id="q1"  class="form-control" style="width:400px">
-            <option >"Desert"</option>
-            <option>"Beach"</option>
-            <option>"desert"</option>
+          <label for="land">Q1:which kind of land you like more:</label>
+          <select id="land"  class="form-control" style="width:400px">
+            <option value="a">"A.Desert"</option>
+            <option value"b">"B.Beach"</option>
+            <option value="c">"C.Parks and Nature"</option>
           </select>
         </div>
         <hr>
@@ -46,16 +55,16 @@ informatiion -->
         <div class="form-group">
           <label for="q2">which color do you like more than others:
           <div class="radio">
-            <input type="radio" name="color" value="green" checked >
-              green
+            <input type="radio" name="color" value="a" checked >
+              A.green
           </div>
           <div class="radio">
-            <input type="radio" name="color" value="red" >
-              Red
+            <input type="radio" name="color" value="b" >
+              B.Red
           </div>
           <div class="radio">
-            <input type="radio" name="color" value="blue" >
-              Blue
+            <input type="radio" name="color" value="c" >
+              C.Blue
           </div>
         </div>
         <hr>
@@ -63,8 +72,8 @@ informatiion -->
         <div class="form-group">
           <label for="q1">Where do you like to sleep:
           <div class="radio">
-            <input type="radio" name="sleep" value="Tent" checked>
-            Tent
+            <input type="radio" name="sleep" value="a" checked>
+            A.Tent
           </div>
           <div class="radio">
             <input type="radio" name="sleep" value="Hotel room">
@@ -72,29 +81,84 @@ informatiion -->
           </div>
           <div class="radio">
             <input type="radio" name="sleep" value="On the sand">
-            On the sand
+             Sea Cruse
           </div>
         </div>
         <hr>
 
         <div class="form-group">
-          <label for="q1">Q1:which kind of land you like more:
-          <input id="q1" class="form-control">
+          <label for="q1">Do you have Kids:
+          <div class="radio">
+            <input type="radio" name="kids" value="a" checked>
+            A.Yes
+          </div>
+          <div class="radio">
+            <input type="radio" name="kids" value="b">
+            B.No
+          </div>
+          <div class="radio">
         </div>
         <hr>
 
         <div class="form-group">
-          <label for="q1">Q1:which kind of land you like more:</label>
-          <input id="q1"  class="form-control">
+          <label for="q1">Which season on the year you prefer:
+          <div class="radio">
+            <input type="radio" name="season" value="a" checked>
+            A.Winter
+          </div>
+          <div class="radio">
+            <input type="radio" name="season" value="b">
+            B.Summer
+          </div>
+          <div class="radio">
+            <input type="radio" name="season" value="c">
+            c.Fall
+          </div>
+          <div class="radio">
+            <input type="radio" name="season" value="d">
+            D.Spring
+          </div>
         </div>
-
-      </form>
-      <button class="btn" type="submit" align="center">Submit</button>
+        <hr>
 
 
+        <div class="form-group">
+          <label for="q1">Do you like to ride:
+          <div class="radio">
+            <input type="radio" name="ride" value="a" checked>
+            A.Car
+          </div>
+          <div class="radio">
+            <input type="radio" name="ride" value="b">
+            B.Train
+          </div>
+          <div class="radio">
+            <input type="radio" name="ride" value="c">
+            C.Air plane
+          </div>
+          <div class="radio">
+            <input type="radio" name="ride" value="d">
+            D.Cruse
+          </div>
+        </div>
+        <hr>
 
-    <!-- insert vacation suggestrs -->
+
+      <button class="btn" type="submit" style="align:center">Submit</button>
+
+    </form>
+
+    </div>
+    </div>
+  </div>
+
+    <!-- the end of the survey class -->
+
+  <div id="final-info"></div>
+
+    <!-- insert vacation suggestors -->
       <div id="first-suggestor">
+
         <h3>Go to New-mexico</h3>
         <a href="https://en.wikipedia.org/wiki/New_Mexico">
           <img src="newmexico2.jpg" style="width:300px"></a>
@@ -103,14 +167,15 @@ informatiion -->
             <p>If you like New-mexico and you want to book a vacation <a href=""></a>
       </div>
 
+
       <div id="second-suggestor">
         <h3>Go to Jordan</h3>
         <a href="https://en.wikipedia.org/wiki/Jordan">
           <img src="wadirum.jpg" style="width:300px"></a>
         <p> To know the places you can go in New-Mexico
             <a href="https://www.newmexico.org/things-to-do/nature/places-to-visit-and-photograph/">Click here</a></p>
-        <button class="btn btn-information" type"text"><a href="https://www.learnhowtoprogram.com/intro-to-programming-evening
-"> Book Vacations</a></button>
+            <button class="btn" type="text"><a href="https://www.tourradar.com/d/jordan?msclkid=3bb7521cd47e18a8b4d40e7165437e29&utm_source=bing&utm_medium=cpc&utm_campaign=Bing%20%7C%20US%20%7C%20Asia%20%7C%20Jordan&utm_term=book%20jordan%20tours&utm_content=Jordan%20%3E%20generic&gclid=CKXL3K2My-ACFbSPxQIdKJUDLA&gclsrc=ds">
+Book A Vacation</a></button>
       </div>
 
       <div id="third-suggestor">
@@ -121,10 +186,6 @@ informatiion -->
             <a href="https://www.newmexico.org/things-to-do/nature/places-to-visit-and-photograph/">Click here</a></p>
         <p>If you like New-mexico and you want to book a vacation <a href=""></a>
       </div>
-
-    </div>
-
-
 
   </body>
 <html>

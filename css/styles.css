@@ -9,5 +9,20 @@ button{
   align:center;
 }
 #first-suggestor{
-  align-items: center;
+  display: none;
+  /* align-items: center; */
+}
+
+#second-suggestor{
+  display: none;
+  /* align-items: center; */
+}
+
+#third-suggestor{
+  display: none;
+  /* align-items: center; */
+}
+
+#vacation-survey{
+   /* display:none;  */
 }

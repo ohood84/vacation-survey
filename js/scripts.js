@@ -1,11 +1,75 @@
 $(document).ready(function(){
-  // $("button").click(function(){
-  var x=1;
-  while(x===1){}
-   $("#div1").fadeToggle("slow");
-   $("#first-suggestor").fadetogglerIn("3000");
+  $("#div1").fadeIn("slow");
+  // $("#div1").fadeToggle("slow");
+  // $("#first-suggestor").fadeIn("3000");
+var name,land,color,sleep,kids,season,ride;
+   $("form#vac").submit(function(event){
+     name=$("#fname").val();
+     land=$("#land").val();
+     color=$("input:radio[name=color]:checked").val();
+     sleep=$("input:radio[name=sleep]:checked").val();
+     kids=$("input:radio[name=kids]:checked").val();
+     season=$("input:radio[name=season]:checked").val();
+     ride=$("input:radio[name=ride]:checked").val();
+     alert(name);
+
+     // $("#final-info").text(name+" , You choose mostly a's you have to book to New-Mexico");
+     // s$("#final-info").text(name+land+color+sleep+kids+season+ride);
+
+ // put the answers in an array
+  var  answer=[land,color,sleep,kids,season,ride];
+  // alert(answer[0]+" "+answer[5]);
+    //var max-counter=0;
+    alert("hellow");
+   var acount=0;
+   var bcount=0;
+   var ccount=0;
+   alert(acount);
+
+ for (index =0; index<6; index+=1){
+    if(answer[index]==="a") {
+      acount+=1;
+      alert("a"+acount);
+   }
+      else if (answer[index]==="b"){
+        bcount+=1;
+        alert("b"+bcount);
+   }
+      else {
+        ccount+=1;
+        alert("c"+ccount);
  }
-  // $("#div2").fadeIn("slow");
-  // $("#div3").fadeIn(3000);
-// });
+// alert("hellow")
+ alert("index="+index)
+}
+
+
+//  $("#final-info").append(name+" , You choose mostly a's you have to book to New-Mexico");
+//  alert("hellow");
+//
+// // find the biggest counter
+if((acount>=bcount)&(acount>=ccount)){
+   // max-counter=a-counter;
+   $("#final-info").append(name+" , You choose mostly a's you have to book to New-Mexico");
+
+  $("#first-suggestor").show();
+}
+
+
+  if((bcount>=acount)&(bcount>=ccount)){
+     // max-counter=a-counter;
+    $("#second-suggestor").show();
+  }
+
+
+  if((ccount>=bcount)&(ccount>=acount)){
+       // max-counter=c-counter;
+      $("#third-suggestor").show();
+    }
+//
+
+
+event.preventDefault();
+ });
+
 });
