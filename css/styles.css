@@ -4,6 +4,16 @@
 .center{
   align:center;
 }
+/* .clickable{
+  /* text-color:blue;
+  text-size:30px; */
+  /* cursur:pointer;
+  color:#0088cc;
+}
+
+.clickable:haver{
+  text-decoration: underline;
+} */ 
 
 button{
   align:center;

@@ -29,18 +29,18 @@ var name,land,color,sleep,kids,season,ride;
  for (index =0; index<6; index+=1){
     if(answer[index]==="a") {
       acount+=1;
-      alert("a"+acount);
+      // alert("a"+acount);
    }
       else if (answer[index]==="b"){
         bcount+=1;
-        alert("b"+bcount);
+        // alert("b"+bcount);
    }
       else {
         ccount+=1;
-        alert("c"+ccount);
+        // alert("c"+ccount);
  }
 // alert("hellow")
- alert("index="+index)
+ // alert("index="+index)
 }
 
 
@@ -49,22 +49,25 @@ var name,land,color,sleep,kids,season,ride;
 //
 // // find the biggest counter
 if((acount>=bcount)&(acount>=ccount)){
-   // max-counter=a-counter;
-   $("#final-info").append(name+" , You choose mostly a's you have to book to New-Mexico");
+   $("#final-info").prepend(name+" , You choose mostly a's you have to book a trip to  New-Mexico<br> click here to know more :");
 
-  $("#first-suggestor").show();
+  //$("#first-suggestor").show();
+  $("#vacation-survey").hide();
+  // $("p").slideDown();
 }
 
 
   if((bcount>=acount)&(bcount>=ccount)){
-     // max-counter=a-counter;
+
     $("#second-suggestor").show();
+      // $("p").slideToggle();
   }
 
 
   if((ccount>=bcount)&(ccount>=acount)){
-       // max-counter=c-counter;
+
       $("#third-suggestor").show();
+        // $("p").slideup();
     }
 //
 
@@ -72,4 +75,8 @@ if((acount>=bcount)&(acount>=ccount)){
 event.preventDefault();
  });
 
+ $("#final-info").click(function(){
+ $("#first-suggestor").slideToggle();
+
+ });
 });
