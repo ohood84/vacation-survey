@@ -1,29 +1,30 @@
 <!doctype>
 <html>
   <head>
-    <title>Vacation</title>
+    <title>Vacation Suggestor</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet"  type="text/css">
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/scripts.js"></script>
   </head>
   <body>
+
+   <!-- start the vacation survey -->
     <div id="vacation-survey">
       <div class="container" color="blue">
+
     <!-- put the image up of the page -->
         <div  class ="center" id="div1">
-          <img src="building.jpg" width="33%" height="200">
-          <img src="wadi-rum-night-camp.jpg" width="33%" height="200">
-          <img src="village.jpg" width="33%" height="200">
+          <img src="vacation-imgs/building.jpg" width="33%" height="200">
+          <img src="vacation-imgs/wadi-rum-night-camp.jpg" width="33%" height="200">
+          <img src="vacation-imgs/village.jpg" width="33%" height="200">
         </div>
 
-   <!-- make the form inside the form -->
 
 
-        <form id="vac">
+   <!-- make the form to enter information -->
+     <form id="vac">
 
-        <!-- enter persinal https://github.com/ohood84/project2
-informatiion -->
         <h2>Enter your information:</h2><hr>
 
           <div class="form-group">
@@ -153,23 +154,23 @@ informatiion -->
     </div>
   </div>
 
-    <!-- the end of the survey class -->
+    <!-- the end of the survey class and star to showing the suggestors places-->
 
-    <div class="container">
-      <div id="home" class="panel" class="clickable">
-      <h4>Home<h4>
+    <div class="container" class="panel panel-info">
+      <div id="home" class="panel-title" class="clickable">
+      <h4><u>Home</u><h4>
       </div>
-        <div id="final-info" class="clickable">
-          <span class="fname"></span>
+        <div id="final-info" class="clickable"><u>
+          <span class="fname"></span></u>
         </div>
 
           <!-- insert vacation suggestors -->
             <div id="first-suggestor"class="panel">
               <h3>Go to New-mexico</h3>
               <a href="https://en.wikipedia.org/wiki/New_Mexico">
-                <img src="newmexico2.jpg" style="width:30%" height="200">
-                <img src="newmexico1.jpg" style="width:30%" height="200">
-                <img src="night-beach.jpg" style="width:30%" height="200">
+                <img src="newmexico-imgs/newmexico2.jpg" style="width:30%" height="200">
+                <img src="newmexico-imgs/newmexico1.jpg" style="width:30%" height="200">
+                <img src="newmexico-imgs/night-beach.jpg" style="width:30%" height="200">
               </a>
 
                 <p> <strong>To know the places you can go in New-Mexico
@@ -182,9 +183,9 @@ informatiion -->
             <div id="second-suggestor" class="panel">
               <h3>Go to Jordan</h3>
               <a href="https://en.wikipedia.org/wiki/Jordan">
-                <img src="wadirum.jpg" style="width:30%">
-                <img src="waterfall.png" style="width:30%">
-                <img src="petra.jpg" style="width:30%">
+                <img src="jordan-imgs/wadirum.jpg" style="width:30%">
+                <img src="jordan-imgs/waterfall.png" style="width:30%">
+                <img src="jordan-imgs/petra.jpg" style="width:30%">
               </a>
               <p> To know the places you can go in Jordan and things you can do
                   <a href="https://www.tripadvisor.com/Attractions-g293985-Activities-Jordan.html">Click here</a></p>
@@ -196,17 +197,17 @@ informatiion -->
             <div id="third-suggestor" class="panel">
               <h3>Go to Italy</h3><strong>
               <a href="https://en.wikipedia.org/wiki/Italy">
-                  <img src="italy1.jpg" style="width:20%">
-                  <img src="italy2.jpg" style="width:20%">
-                  <img src="italy3.jpg" style="width:20%">
-                  <img src="Veince.jpg" style="width:20%">
+                  <img src="italy-imgs/italy1.jpg" style="width:20%">
+                  <img src="italy-imgs/italy2.jpg" style="width:20%">
+                  <img src="italy-imgs/italy3.jpg" style="width:20%">
+                  <img src="italy-imgs/Venice.jpg" style="width:20%">
 
                 </a>
               <p> To know the places you can go in Italy and what van you do
                   <a href="https://www.audleytravel.com/us/italy/places-to-go?msclkid=8160429d7c11188618c21eef75860923&utm_source=bing&utm_medium=cpc&utm_campaign=31-505%20Italy&utm_term=places%20to%20visit%20in%20italy&utm_content=Italy%20-%20General%20-%20Places%20-%20Exact&audcmp=286018280&audadg=1255642284031948&audkey=places%20to%20visit%20in%20italy&auddev=c&audtel=ppcnb&audnet=o
                   ">Click here</a></p>
               <p>If you like Itay and you want to book a vacation <br>
-                <button class="btn"> Book a vacation</button><a rel="booking vacation website" href="https://bookit.com/"></a>
+                <button class="btn"><a  href="https://bookit.com/"> Book a vacation</a></button>
               </p>
             </div>
 
