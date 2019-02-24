@@ -8,25 +8,25 @@
     <script src="js/scripts.js"></script>
   </head>
   <body>
-
     <div id="vacation-survey">
-
+      <div class="container" color="blue">
     <!-- put the image up of the page -->
-      <div  class ="center" id="div1">
-        <img src="petra.jpg" width="330" height="200" >
-        <img src="wadi-rum-night-camp.jpg" width="330" height="200" >
-        <img src="village.jpg" width="330" height="200" >
-      </div>
+        <div  class ="center" id="div1">
+          <img src="building.jpg" width="33%" height="200">
+          <img src="wadi-rum-night-camp.jpg" width="33%" height="200">
+          <img src="village.jpg" width="33%" height="200">
+        </div>
 
    <!-- make the form inside the form -->
-      <div class="container" color="blue">
+
 
         <form id="vac">
 
         <!-- enter persinal https://github.com/ohood84/project2
 informatiion -->
+        <h2>Enter your information:</h2><hr>
+
           <div class="form-group">
-            <h2>Enter your information:</h2>
             <label for="fname">Full Name:</label>
             <input id="fname"  class="form-control" style="width:400px">
           </div>
@@ -36,14 +36,15 @@ informatiion -->
             <label for="email">Email:</label>
             <input id="email" class="form-control" style="width:400px">
           </div>
-          <hr>
+
+          <br>
 
 
         <!-- the survey questions -->
-        <h2>Please answer the questions below:</h2>
+      <h2>Please answer the questions below:</h2><hr>
 
         <div class="form-group">
-          <label for="land">Q1:which kind of land you like more:</label>
+          <label for="land">which kind of land you like more:</label>
           <select id="land"  class="form-control" style="width:400px">
             <option value="a">"A.Desert"</option>
             <option value"b">"B.Beach"</option>
@@ -70,24 +71,24 @@ informatiion -->
         <hr>
 
         <div class="form-group">
-          <label for="q1">Where do you like to sleep:
+          <label for="q3">Where do you like to sleep:
           <div class="radio">
             <input type="radio" name="sleep" value="a" checked>
-            A.Tent
+            A.Hotel Room
           </div>
           <div class="radio">
-            <input type="radio" name="sleep" value="Hotel room">
-            B.Hotel Room
+            <input type="radio" name="sleep" value="b">
+            B.Tent
           </div>
           <div class="radio">
-            <input type="radio" name="sleep" value="On the sand">
+            <input type="radio" name="sleep" value="c">
              C.Sea Cruse
           </div>
         </div>
         <hr>
 
         <div class="form-group">
-          <label for="q1">Do you have Kids:
+          <label for="q4">Do you have Kids:
           <div class="radio">
             <input type="radio" name="kids" value="a" checked>
             A.Yes
@@ -101,7 +102,7 @@ informatiion -->
         <hr>
 
         <div class="form-group">
-          <label for="q1">Which season on the year you prefer:
+          <label for="q5">Which season on the year you prefer:
           <div class="radio">
             <input type="radio" name="season" value="a" checked>
             A.Winter
@@ -122,8 +123,8 @@ informatiion -->
         <hr>
 
 
-        <div class="form-group">
-          <label for="q1">Do you like to ride:
+        <div class="form-group" >
+          <label for="q6">Do you like to ride:
           <div class="radio">
             <input type="radio" name="ride" value="a" checked>
             A.Car
@@ -153,6 +154,7 @@ informatiion -->
   </div>
 
     <!-- the end of the survey class -->
+
     <div class="container">
       <div id="home" class="panel" class="clickable">
       <h4>Home<h4>
@@ -165,22 +167,24 @@ informatiion -->
             <div id="first-suggestor"class="panel">
               <h3>Go to New-mexico</h3>
               <a href="https://en.wikipedia.org/wiki/New_Mexico">
-                <img src="newmexico2.jpg" style="width:30%">
-                <img src="newmexico1.jpg" style="width:30%">
-                <img src="night-beach.jpg" style="width:30%">
+                <img src="newmexico2.jpg" style="width:30%" height="200">
+                <img src="newmexico1.jpg" style="width:30%" height="200">
+                <img src="night-beach.jpg" style="width:30%" height="200">
               </a>
 
                 <p> <strong>To know the places you can go in New-Mexico
                   <a href="https://www.newmexico.org/things-to-do/nature/places-to-visit-and-photograph/">Click here</a><br>
                   </strong>
-                    <button><a href="https://bookit.com/">Book Vacation</a></button></p>
+                    <button class="btn"><a href="https://bookit.com/">Book Vacation</a></button></p>
             </div>
 
 
-            <div id="second-suggestor">
+            <div id="second-suggestor" class="panel">
               <h3>Go to Jordan</h3>
               <a href="https://en.wikipedia.org/wiki/Jordan">
                 <img src="wadirum.jpg" style="width:30%">
+                <img src="waterfall.png" style="width:30%">
+                <img src="petra.jpg" style="width:30%">
               </a>
               <p> To know the places you can go in Jordan and things you can do
                   <a href="https://www.tripadvisor.com/Attractions-g293985-Activities-Jordan.html">Click here</a></p>
@@ -189,15 +193,20 @@ informatiion -->
       Book A Vacation</a></button>
              </div>
 
-            <div id="third-suggestor">
+            <div id="third-suggestor" class="panel">
               <h3>Go to Italy</h3><strong>
               <a href="https://en.wikipedia.org/wiki/Italy">
-                  <img src="italy1.jpg" style="width:300px"></a>
+                  <img src="italy1.jpg" style="width:20%">
+                  <img src="italy2.jpg" style="width:20%">
+                  <img src="italy3.jpg" style="width:20%">
+                  <img src="Veince.jpg" style="width:20%">
+
+                </a>
               <p> To know the places you can go in Italy and what van you do
                   <a href="https://www.audleytravel.com/us/italy/places-to-go?msclkid=8160429d7c11188618c21eef75860923&utm_source=bing&utm_medium=cpc&utm_campaign=31-505%20Italy&utm_term=places%20to%20visit%20in%20italy&utm_content=Italy%20-%20General%20-%20Places%20-%20Exact&audcmp=286018280&audadg=1255642284031948&audkey=places%20to%20visit%20in%20italy&auddev=c&audtel=ppcnb&audnet=o
                   ">Click here</a></p>
               <p>If you like Itay and you want to book a vacation <br>
-                <button> Book a vacation</button><a rel="booking vacation website" href="https://bookit.com/"></a>
+                <button class="btn"> Book a vacation</button><a rel="booking vacation website" href="https://bookit.com/"></a>
               </p>
             </div>
 

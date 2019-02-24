@@ -1,13 +1,14 @@
 $(document).ready(function(){
-  $("#div1").fadeIn("slow");
-  // $("#div1").fadeToggle("slow");
-  // $("#first-suggestor").fadeIn("3000");
+  $("#div1").fadeIn("3000");
+
 var name,land,color,sleep,kids,season,ride;
-var max=0;
-var acount=0;
-var bcount=0;
-var ccount=0;
+var max=0,acount=0,bcount=0,ccount=0;
    $("form#vac").submit(function(event){
+      acount=0;
+      bcount=0;
+      ccount=0;
+      max=0;
+      var index=0,
      name=$("#fname").val();
      land=$("#land").val();
      color=$("input:radio[name=color]:checked").val();
@@ -15,82 +16,63 @@ var ccount=0;
      kids=$("input:radio[name=kids]:checked").val();
      season=$("input:radio[name=season]:checked").val();
      ride=$("input:radio[name=ride]:checked").val();
-     alert(name);
-
-     // $("#final-info").text(name+" , You choose mostly a's you have to book to New-Mexico");
-     // s$("#final-info").text(name+land+color+sleep+kids+season+ride);
-
- // put the answers in an array
-  var  answer=[land,color,sleep,kids,season,ride];
-  // alert(answer[0]+" "+answer[5]);
-    //var max-counter=0;
-    // alert("hellow");
-
-   alert(acount);
-
- for (index =0; index<6; index+=1){
-    if(answer[index]==="a") {
-      acount+=1;
-      // alert("a"+acount);
-   }
-      else if (answer[index]==="b"){
-        bcount+=1;
-        // alert("b"+bcount);
-   }
-      else {
-        ccount+=1;
-        // alert("c"+ccount);
- }
-// alert("hellow")
- // alert("index="+index)
-}
+     // alert(name);
 
 
-//  $("#final-info").append(name+" , You choose mostly a's you have to book to New-Mexico");
-//  alert("hellow");
-//
-// // find the biggest counter
-if((acount>=bcount)&(acount>=ccount)){
-   $("#final-info").prepend(name+" , You choose mostly a's you have to book a trip to  New-Mexico<br> click here to know more :");
+      var  answer=[land,color,sleep,kids,season,ride];
 
-  //$("#first-suggestor").show();
-  $("#vacation-survey").hide();
-  // $("p").slideDown();
-  max=acount;
-}
+    // alert(index);
 
-
-  if((bcount>=acount)&(bcount>=ccount)){
-    $("#final-info").prepend(name+" , You choose mostly b's you have to book a trip to  Jordan<br> click here to know more :");
-
-   //$("#first-suggestor").show();
-   $("#vacation-survey").hide();
-   // $("p").slideDown();
-    // $("#second-suggestor").show();
-    max=bcount;
-      // $("p").slideToggle();
-  }
-
-
-  if((ccount>=bcount)&(ccount>=acount)){
-
-    $("#final-info").prepend(name+" , You choose mostly c's you have to book a trip to  Italy<br> click here to know more :");
-
-   //$("#first-suggestor").show();
-   $("#vacation-survey").hide();
-   // $("p").slideDown();
-      // $("#third-suggestor").show();
-        // $("p").slideup();
-        max=ccount;
+     for (index =0; index<6; index+=1){
+        if(answer[index]==="a") {
+          acount+=1;
+          // alert("a"+acount);
+       }
+          else if (answer[index]==="b"){
+            bcount+=1;
+             // alert("b"+bcount);
+       }
+          else {
+            ccount+=1;
+             // alert("c"+ccount);
+     }
+    // alert("hellow")
+     // alert("index="+index)
     }
-//
+
+       // alert(acount+bcount);
+
+  if((acount>=bcount)&(acount>=ccount)){
+     $("#final-info").prepend(name+" , You choose mostly a's you have to book a trip to  New-Mexico<br> click here to know more :");
+     $("#vacation-survey").hide();
+      $("#final-info").show();
+    // alert("acount")
+    max=acount;
+  }
+    else if((bcount>=acount)&(bcount>=ccount)){
+      $("#final-info").prepend(name+" , You choose mostly b's you have to book a trip to  Jordan<br> click here to know more :");
+      $("#vacation-survey").hide();
+       $("#final-info").show();
+
+      max=bcount;
+    }
+     else{
+
+      $("#final-info").prepend(name+" , You choose mostly c's you have to book a trip to  Italy<br> click here to know more :");
+      $("#vacation-survey").hide();
+        $("#final-info").show();
+
+          max=ccount;
+          // alert("ccount");
+      }
+
  $("#home").show();
 
 event.preventDefault();
  });
 
  $("#final-info").click(function(){
-   alert(max);
+   //alert(max);
   if (max===acount){
      $("#first-suggestor").slideToggle();}
     else if (max===bcount){
@@ -106,7 +88,8 @@ event.preventDefault();
    $("#second-suggestor").hide();
    $("#third-suggestor").hide();
    $("#home").hide();
-   $("#final_info").text("");
+   $("#final-info").hide();
+   $("#final-info").text("");
    $("#vacation-survey").show();
 
 

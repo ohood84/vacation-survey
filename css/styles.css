@@ -5,9 +5,9 @@
   align: center;
 }
 .clickable{
-  text-color: blue;
-  text-size: 30px;
- cursur: pointer;
+  /* text-color: blue; */
+  /* text-size: 30px; */
+ cursor: pointer;
   color: #0088cc;
 }
 
