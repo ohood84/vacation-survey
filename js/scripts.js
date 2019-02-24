@@ -3,6 +3,10 @@ $(document).ready(function(){
   // $("#div1").fadeToggle("slow");
   // $("#first-suggestor").fadeIn("3000");
 var name,land,color,sleep,kids,season,ride;
+var max=0;
+var acount=0;
+var bcount=0;
+var ccount=0;
    $("form#vac").submit(function(event){
      name=$("#fname").val();
      land=$("#land").val();
@@ -20,10 +24,8 @@ var name,land,color,sleep,kids,season,ride;
   var  answer=[land,color,sleep,kids,season,ride];
   // alert(answer[0]+" "+answer[5]);
     //var max-counter=0;
-    alert("hellow");
-   var acount=0;
-   var bcount=0;
-   var ccount=0;
+    // alert("hellow");
+
    alert(acount);
 
  for (index =0; index<6; index+=1){
@@ -54,29 +56,59 @@ if((acount>=bcount)&(acount>=ccount)){
   //$("#first-suggestor").show();
   $("#vacation-survey").hide();
   // $("p").slideDown();
+  max=acount;
 }
 
 
   if((bcount>=acount)&(bcount>=ccount)){
+    $("#final-info").prepend(name+" , You choose mostly b's you have to book a trip to  Jordan<br> click here to know more :");
 
-    $("#second-suggestor").show();
+   //$("#first-suggestor").show();
+   $("#vacation-survey").hide();
+   // $("p").slideDown();
+    // $("#second-suggestor").show();
+    max=bcount;
       // $("p").slideToggle();
   }
 
 
   if((ccount>=bcount)&(ccount>=acount)){
 
-      $("#third-suggestor").show();
+    $("#final-info").prepend(name+" , You choose mostly c's you have to book a trip to  Italy<br> click here to know more :");
+
+   //$("#first-suggestor").show();
+   $("#vacation-survey").hide();
+   // $("p").slideDown();
+      // $("#third-suggestor").show();
         // $("p").slideup();
+        max=ccount;
     }
 //
-
+ $("#home").show();
 
 event.preventDefault();
  });
 
  $("#final-info").click(function(){
- $("#first-suggestor").slideToggle();
+   alert(max);
+  if (max===acount){
+     $("#first-suggestor").slideToggle();}
+    else if (max===bcount){
+      $("#second-suggestor").slideToggle();}
+     else {
+       $("#third-suggestor").slideToggle();
+
+    }
+
+ });
+ $("#home").click(function(){
+   $("#first-suggestor").hide();
+   $("#second-suggestor").hide();
+   $("#third-suggestor").hide();
+   $("#home").hide();
+   $("#final_info").text("");
+   $("#vacation-survey").show();
+
 
  });
 });

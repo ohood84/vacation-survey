@@ -2,22 +2,23 @@
   background-color: lightblue;
 }
 .center{
-  align:center;
+  align: center;
 }
-/* .clickable{
-  /* text-color:blue;
-  text-size:30px; */
-  /* cursur:pointer;
-  color:#0088cc;
+.clickable{
+  text-color: blue;
+  text-size: 30px;
+ cursur: pointer;
+  color: #0088cc;
 }
 
 .clickable:haver{
   text-decoration: underline;
-} */ 
+}
 
 button{
-  align:center;
+  align-self: center;
 }
+
 #first-suggestor{
   display: none;
   /* align-items: center; */
@@ -35,4 +36,7 @@ button{
 
 #vacation-survey{
    /* display:none;  */
+}
+#home{
+  display: none;
 }
