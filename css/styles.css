@@ -1,17 +1,23 @@
  body{
-  background-color: lightblue;
+  background-color: #404040;
 }
-.center{
+.left{
+  align: left ;
+}
+.centeral{
   align: center;
+}
+#p2,#p3{
+  display:none;
 }
 .clickable{
   /* text-color: blue; */
   /* text-size: 30px; */
  cursor: pointer;
-  color: #0088cc;
+  color: #ffffff;
 }
 
-.clickable:haver{
+.clickable:hover{
   text-decoration: underline;
 }
 
@@ -22,6 +28,9 @@ button{
 #first-suggestor{
   display: none;
   /* align-items: center; */
+}
+#question1,#question2,#question3,#question4,#question5,#question6{
+  display: none;
 }
 
 #second-suggestor{
@@ -39,4 +48,19 @@ button{
 }
 #home{
   display: none;
+}
+ .centered{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+
+ }
+  #cont1{
+   position:relative;
+   color:white;
+   text-align: center;
+ }
+#sub{
+  display:none;
 }

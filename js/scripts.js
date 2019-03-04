@@ -1,16 +1,38 @@
 $(document).ready(function(){
-  $("#div1").fadeIn("3000");
+  var x=[1,2,3];
+  var a=[2,3,1];
+  var cond=1;
+
+  var counter=0;
+    // while(counter<3){
+    $("#imges-move").click(function(){
+     if(counter===3){
+       counter=0;
+     }
+     // $("#p1").fadeOut();
+     // $("#p2").fadeIn();
+     // counter++;
+      $("#p"+x[counter]).hide();
+      $("#p"+a[counter]).show();
+      counter++;
+      // $("#p"+i).fadeIn("3000")
+    });
+
+
+
+
+
 
 var name,land,color,sleep,kids,season,ride;
 var max=0,acount=0,bcount=0,ccount=0;
-   $("form#vac").submit(function(event){
+   $("button#sub").click(function(event){
       acount=0;
       bcount=0;
       ccount=0;
       max=0;
       var index=0,
      name=$("#fname").val();
-     land=$("#land").val();
+     land=$("#input:radio[name=land]:checked").val();
      color=$("input:radio[name=color]:checked").val();
      sleep=$("input:radio[name=sleep]:checked").val();
      kids=$("input:radio[name=kids]:checked").val();
@@ -91,7 +113,46 @@ event.preventDefault();
    $("#final-info").hide();
    $("#final-info").text("");
    $("#vacation-survey").show();
+   $("#sub").hide();
+  $("#fname").show();
 
 
  });
-});
+ $("button#go").click(function(event){
+   $("#go").hide();
+  $("#fname" ).hide();
+   $("#question1").fadeIn();
+   // alert("hellow")
+   event.preventDefault();
+ });
+
+ $("#question1").click(function(){
+  //  alert("q2");
+   $("#question2").fadeIn();
+   $("#question1").fadeOut();
+
+ });
+ $("#question2").click(function(){
+   $("#question2").fadeOut();
+   $("#question3").fadeIn();
+ });
+ $("#question3").click(function(){
+   $("#question3").fadeOut();
+   $("#question4").fadeIn();
+ });
+ $("#question4").click(function(){
+  $("#question4").fadeOut();
+   $("#question5").fadeIn();
+ });
+ $("#question5").click(function(){
+   $("#question5").fadeOut();
+   $("#question6").fadeIn();
+ });
+
+ $("#question6").click(function(){
+   $("#question6").fadeOut();
+   $("#sub").fadeIn();
+ });
+
+
+ });
